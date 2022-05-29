@@ -31,6 +31,19 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="MatrixMultiplication.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MatrixMultiplication.h" />
+		<Unit filename="SquareMatrix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SquareMatrix.h" />
+		<Unit filename="Utilities.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="Utilities.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
