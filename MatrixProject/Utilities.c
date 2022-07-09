@@ -49,11 +49,7 @@ void showIntMatrix(float** M, int row, int column) {
         printf("\n");
     }
 }
-void cleanMatrix(float** A, float** B, float** C) {
-    A = {{0}};
-    B = {{0}};
-    C = {{0}};
-}
+
 void menu() {
     float (*sumFunctions[4])(int,int) = {"UpperTriangularSum","LowerTriangularSum", "trace", "secondaryTrace"};
     void(*determineMatrixType[4])(int, int) = {"DiagonalMatrix", "SymmetricMatrix", "IdentityMatrix", "TransposeMatrix"};
