@@ -3,8 +3,7 @@
 
 int groupNumber;
 
-void showRealsMatrix(float** M, int row, int column); 
-void showIntMatrix(float** M, int row, int column);
+void showMatrix(float**, int, int, int);
 int validValue(int, int,const char*);
 void fillMatrix(float**, int, int);
 void menu();

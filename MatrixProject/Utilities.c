@@ -37,10 +37,23 @@ void showIntMatrix(float** M, int row, int column) {
         printf("\n");
     }
 }
+void showMatrix(float** M, int row, int column, int typeData) {
+    int ans;
+    printf("Wanna see the matrix? Press 0. ");
+    scanf("%d", &ans);
+    if (ans != 0)
+        return;
+    if(typeData == 1){
+        showRealsMatrix(M, row, column);
+    } else
+    {
+        showIntMatrix(M, row, column);
+    }
+    return;
+}
 void menu() {
     void (*sumFunctions[4])(int, int) = {"UpperTriangularSum","LowerTriangularSum", "trace", "secondaryTrace"};
     void (*determineMatrixType[4])(int, int) = {"DiagonalMatrix", "SymmetricMatrix", "IdentityMatrix", "TransposeMatrix"};
-    void (*showMatrix[2])(float**, int, int) = {"showRealsMatrix","showIntMatrix"};
     int menuOP, size;
 
     printf("Welcome to the matrix project.\n",
