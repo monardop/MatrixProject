@@ -11,28 +11,15 @@ int validValue(int bottom, int top, const char* msj) {
     }while((value < bottom) || (value > top));
     return value;
 }
-void fillMatrix(float** Matrix, int typeValue, int row, int column) {
-    if(typeValue == realNumbers) {
-        float x;
-        for(int i = 0; i<row; i++){
-            for(int j = 0; j<column; j++){
-                printf("Insert a value for the r %d c %d: ", i , j);
-                scanf("%f", &x);
-                *(*(Matrix + i)+j) = x;
-            }
-        }
-    } else
-    {
-        int x;
-        for(int i = 0; i<row; i++){
-            for(int j = 0; j<column; j++){
-                printf("Insert a value for the r %d c %d: ", i , j);
-                scanf("%d", &x);
-                *(*(Matrix + i)+j) = x;
-            }
+void fillMatrix(float** Matrix, int row, int column) {
+    float x;
+    for(int i = 0; i<row; i++){
+        for(int j = 0; j<column; j++){
+            printf("Insert a value for the r %d c %d: ", i , j);
+            scanf("%f", &x);
+            *(*(Matrix + i)+j) = x;
         }
     }
-    
 }
 void showRealsMatrix(float** M, int row, int column) {
     for(int i = 0; i < row; i++) {
