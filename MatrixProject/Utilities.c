@@ -38,10 +38,10 @@ void showIntMatrix(float** M, int row, int column) {
     }
 }
 void menu() {
-    void (*sumFunctions[4])(int,int) = {"UpperTriangularSum","LowerTriangularSum", "trace", "secondaryTrace"};
+    void (*sumFunctions[4])(int, int) = {"UpperTriangularSum","LowerTriangularSum", "trace", "secondaryTrace"};
     void (*determineMatrixType[4])(int, int) = {"DiagonalMatrix", "SymmetricMatrix", "IdentityMatrix", "TransposeMatrix"};
     void (*showMatrix[2])(float**, int, int) = {"showRealsMatrix","showIntMatrix"};
-    int menuOP, i, j;
+    int menuOP, size;
 
     printf("Welcome to the matrix project.\n",
     "Which group of numbers will you use?\n");
@@ -50,15 +50,13 @@ void menu() {
     menuOP =  validValue(1,2,"1- Just determinate the type\n2- Show operations.\n");
     if (menuOP == 1) {
         menuOP = validValue(0,4,"0- Is it diagonal?\n1- Is it symmetrical?\n2- Is it the identity matrix?\n3- Transpose matrix\n");
-        i = validValue(1,5,"How many rows does your matrix have? 1-5");
-        j = validValue(1,5,"How many columns does your matrix have? 1-5");
-        determineMatrixType[menuOP](i, j);
+        size = validValue(1,5,"How many rows does your matrix have? 1-5");
+        determineMatrixType[menuOP](size, groupNumber);
     } else
     {
         menuOP = validValue(0,4,"0- Upper triangular sum\n1- Lower triangular sum\n2- Trace\n3- Secondary trace\n ");
-        i = validValue(1,5,"How many rows does your matrix have? 1-5");
-        j = validValue(1,5,"How many columns does your matrix have? 1-5");
-        sumFunctions[menuOP](i, j);
+        size = validValue(1,5,"How many rows does your matrix have? 1-5");
+        sumFunctions[menuOP](size, groupNumber);
     }
     
 
